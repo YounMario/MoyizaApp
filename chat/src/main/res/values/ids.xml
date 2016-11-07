@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="edit_username" type="id">false</item>
+    <item name="edit_password" type="id">false</item>
+    <item name="edit_phone" type="id">false</item>
+    <item name="edit_search" type="id">false</item>
+    <item name="edit_phone_code" type="id">false</item>
+    <item name="btn_login" type="id">false</item>
+    <item name="btn_sgin" type="id">false</item>
+    <item name="btn_back" type="id">false</item>
+    <item name="btn_more" type="id">false</item>
+    <item name="btn_send" type="id">false</item>
+    <item name="btn_emoji" type="id">false</item>
+    <item name="btn_voice" type="id">false</item>
+    <item name="txt_user_name" type="id">false</item>
+    <item name="txt_user_moto" type="id">false</item>
+    <item name="txt_date" type="id">false</item>
+    <item name="txt_content" type="id">false</item>
+    <item name="img_head" type="id">false</item>
+    <item name="txt_send_txt" type="id">false</item>
+    <item name="txt_recieve_txt" type="id">false</item>
+    <item name="layout_title_bar" type="id">false</item>
+    <item name="txt_praise_count" type="id">false</item>
+    <item name="txt_comment_count" type="id">false</item>
+</resources>

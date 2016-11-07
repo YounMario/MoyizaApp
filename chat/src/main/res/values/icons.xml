@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_camera">&#xE3B0;</string>
+    <string name="icon_parise">&#xE8DC;</string>
+    <string name="icon_add_location">&#xE567;</string>
+    <string name="icon_location">&#xE8B4;</string>
+    <string name="icon_comment">&#xE0B9;</string>
+    <string name="icon_arrow_down">&#xE313;</string>
+    <string name="icon_arrow_up">&#xE316;</string>
+    <string name="icon_arrow_front">&#xE315;</string>
+    <string name="icon_arrow_back">&#xE314;</string>
+    <string name="icon_cancel">&#xE14C;</string>
+
+    <!--location-->
+    <string name="icon_hospital">&#xE548;</string>
+    <string name="icon_airport">&#xE53D;</string>
+    <string name="icon_subway">&#xE56F;</string>
+    <string name="icon_restaurant">&#xE56C;</string>
+    <string name="icon_store">&#xE56C;</string>
+    <string name="icon_bar">&#xE540;</string>
+    <string name="icon_cafe">&#xE541;</string>
+    <string name="icon_hotel">&#xE549;</string>
+    <string name="icon_market">&#xE547;</string>
+    <string name="icon_libray">&#xE54B;</string>
+    <string name="icon_movie">&#xE54D;</string>
+
+
+</resources>

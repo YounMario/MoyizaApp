@@ -1,0 +1,62 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!-- 通用 -->
+    <dimen name="px_10">5dp</dimen>
+    <dimen name="px_5">2.5dp</dimen>
+    <dimen name="px_1">0.5dp</dimen>
+    <dimen name="px_2">1dp</dimen>
+    <dimen name="px_18">9dp</dimen>
+    <dimen name="px_20">10dp</dimen>
+    <dimen name="px_22">11dp</dimen>
+    <dimen name="px_25">12.5dp</dimen>
+    <dimen name="px_26">13dp</dimen>
+    <dimen name="px_16">8dp</dimen>
+    <dimen name="px_30">15dp</dimen>
+    <dimen name="px_32">16dp</dimen>
+    <dimen name="px_36">18dp</dimen>
+    <dimen name="px_24">12dp</dimen>
+    <dimen name="px_28">14dp</dimen>
+    <dimen name="px_34">17dp</dimen>
+    <dimen name="px_40">20dp</dimen>
+    <dimen name="px_45">22.5dp</dimen>
+    <dimen name="px_48">42dp</dimen>
+    <dimen name="px_50">25dp</dimen>
+    <dimen name="px_60">30dp</dimen>
+    <dimen name="px_68">34dp</dimen>
+    <dimen name="px_80">40dp</dimen>
+    <dimen name="px_88">44dp</dimen>
+    <dimen name="px_90">45dp</dimen>
+    <dimen name="px_96">48dp</dimen>
+    <dimen name="px_100">50dp</dimen>
+    <dimen name="px_120">60dp</dimen>
+    <dimen name="px_140">70dp</dimen>
+    <dimen name="px_180">90dp</dimen>
+    <dimen name="px_220">110dp</dimen>
+    <dimen name="px_270">135dp</dimen>
+    <dimen name="px_280">140dp</dimen>
+    <dimen name="px_160">80dp</dimen>
+    <dimen name="px_70">35dp</dimen>
+    <dimen name="px_76">38dp</dimen>
+    <dimen name="px_300">150dp</dimen>
+    <dimen name="px_320">160dp</dimen>
+    <dimen name="px_170">85dp</dimen>
+    <dimen name="px_110">55dp</dimen>
+    <dimen name="px_130">65dp</dimen>
+    <dimen name="px_150">75dp</dimen>
+    <dimen name="px_210">105dp</dimen>
+    <dimen name="px_340">170dp</dimen>
+    <dimen name="px_190">95dp</dimen>
+    <dimen name="px_360">180dp</dimen>
+    <dimen name="px_460">230dp</dimen>
+    <dimen name="px_560">280dp</dimen>
+
+    <dimen name="item_img_w_h">40dp</dimen>
+    <dimen name="common_margin">16dp</dimen>
+    <dimen name="margin_card">8dp</dimen>
+    <dimen name="item_text_left_margin">72dp</dimen>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/common_signin_btn_icon_dark"
+        android:duration="200"></item>
+    <item
+        android:drawable="@drawable/common_signin_btn_icon_disabled_focus_light"
+        android:duration="200"></item>
+    <item
+        android:drawable="@drawable/common_signin_btn_icon_focus_light"
+        android:duration="200"></item>
+    <item
+        android:drawable="@drawable/common_signin_btn_icon_pressed_light"
+        android:duration="200"></item>
+    <item
+        android:drawable="@drawable/common_signin_btn_icon_disabled_focus_dark"
+        android:duration="200"></item>
+
+</animation-list>

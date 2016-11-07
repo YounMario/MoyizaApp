@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_card"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_user_profile"></include>
+
+        <RelativeLayout
+            android:id="@+id/img_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"></RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin"
+            android:text="新闻联播 呵呵呵， 圣诞节覅送囧事发" />
+
+
+        <include layout="@layout/layout_comments_and_praise"></include>
+    </LinearLayout>
+</LinearLayout>

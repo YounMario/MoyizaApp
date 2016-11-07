@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px_150"
+    android:layout_height="@dimen/px_150" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/px_300"
+        android:layout_height="@dimen/px_300"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_image" />
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="@dimen/px_30"
+        android:layout_height="@dimen/px_30"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_voice_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/px_20"
+            android:layout_marginRight="@dimen/px_20"
+            android:lineSpacingExtra="2dp"
+            android:minWidth="@dimen/px_20"
+            android:scaleType="fitEnd" />
+
+        <TextView
+            android:id="@+id/tv_time_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/px_20"
+            android:layout_marginRight="@dimen/px_20"
+            android:layout_toLeftOf="@id/iv_voice_send"
+            android:layout_toStartOf="@id/iv_voice_send"
+            android:gravity="center"
+            android:text="0" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

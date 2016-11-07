@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FontIconView">
+        <attr name="typeface" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MediumTextView">
+        <attr name="medium_text_color" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IconTextButton">
+        <attr name="icon_text" format="string|reference" />
+        <attr name="text" format="string|reference" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DynamicHeightImageView">
+        <attr name="height_ratio" format="float" />
+    </declare-styleable>
+
+</resources>

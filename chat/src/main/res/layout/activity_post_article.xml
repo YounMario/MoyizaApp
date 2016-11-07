@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.younchen.chat.ui.PostArticleActivity">
+
+    <LinearLayout
+        android:id="@+id/contain_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/common_margin"
+            android:src="@drawable/user" />
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:background="@null"
+            android:hint="@string/hint_write"
+            android:minHeight="40dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/contain_location"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@+id/contain_post">
+
+        <com.younchen.chat.ui.view.IconTextView
+            android:id="@+id/txt_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin" />
+
+        <com.younchen.chat.ui.view.MediumTextView
+            android:id="@+id/txt_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_toRightOf="@+id/txt_icon" />
+
+        <com.younchen.chat.ui.view.MediumTextView
+            android:id="@+id/txt_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_toRightOf="@+id/txt_location" />
+    </RelativeLayout>
+
+    <com.younchen.chat.ui.components.MyRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/contain_location">
+
+    </com.younchen.chat.ui.components.MyRecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.younchen.chat.ui.view.IconTextView
+            android:id="@+id/btn_img"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/icon_camera" />
+
+        <com.younchen.chat.ui.view.IconTextView
+            android:id="@+id/btn_location"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/icon_add_location" />
+
+        <com.younchen.chat.ui.view.IconTextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/comment"
+            android:visibility="gone" />
+
+        <com.younchen.chat.ui.view.IconTextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

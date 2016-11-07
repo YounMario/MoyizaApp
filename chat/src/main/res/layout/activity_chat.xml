@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baseBackGroundColor"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_title_bar" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <com.younchen.chat.ui.components.MyRecyclerView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:paddingBottom="2dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:transcriptMode="alwaysScroll" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_chat_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_100">
+
+        <Button
+            android:id="@id/btn_more"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80"
+            android:layout_margin="@dimen/px_10"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickMore"
+            android:text="@string/more" />
+
+        <EditText
+            android:id="@+id/edit_message_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btn_emoji"
+            android:layout_toRightOf="@+id/btn_more" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/px_10"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickSend"
+            android:text="@string/send" />
+
+        <Button
+            android:id="@id/btn_emoji"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80"
+            android:layout_margin="@dimen/px_10"
+            android:layout_toLeftOf="@id/btn_send"
+            android:onClick="onClickEmoji"
+            android:text="@string/emoji" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/emoji_pager_view"
+        layout="@layout/layout_emoji_chat"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <com.younchen.chat.ui.view.IconTextView
+        android:id="@+id/icon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:text="@string/icon_add_location"
+        android:textColor="@color/gray"
+        android:textSize="36dp" />
+
+    <com.younchen.chat.ui.view.MediumTextView
+        android:id="@+id/txt_location"
+        style="@style/item_main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/icon_text"
+        android:layout_toRightOf="@+id/icon_text"
+        android:text="北京市兰州烧麦"
+         />
+
+    <com.younchen.chat.ui.view.MediumTextView
+        android:id="@+id/txt_distance"
+        style="@style/item_sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin"
+        android:text="2000米" />
+
+
+</RelativeLayout>

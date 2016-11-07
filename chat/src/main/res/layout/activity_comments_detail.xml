@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.younchen.chat.ui.CommentsDetailActivity">
+
+
+    <com.younchen.chat.ui.components.MyRecyclerView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/baseBackGroundColor"
+        android:dividerHeight="1px" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|bottom"
+            android:layout_marginLeft="84dp"
+            android:layout_marginRight="84dp"
+            android:hint="@string/hint_write" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|right" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MoyizaApp.iml" filepath="$PROJECT_DIR$/MoyizaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyDaoGenerator/MyDaoGenerator.iml" filepath="$PROJECT_DIR$/MyDaoGenerator/MyDaoGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emoji/emoji.iml" filepath="$PROJECT_DIR$/emoji/emoji.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ronglib/ronglib.iml" filepath="$PROJECT_DIR$/ronglib/ronglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/youn/youn.iml" filepath="$PROJECT_DIR$/youn/youn.iml" />
+    </modules>
+  </component>
+</project>
