@@ -64,9 +64,7 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        myPager= (ViewPager) view.findViewById(R.id.my_pager);
         context=getContext();
-        btnUnzip= (Button) view.findViewById(R.id.btn_unzip);
 
         EmojiPagerAdapter adapter=new EmojiPagerAdapter(null);
         myPager.setAdapter(adapter);
