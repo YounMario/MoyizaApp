@@ -130,7 +130,7 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            View view=LayoutInflater.from(context).inflate(R.layout.layout_test,null);
+            View view=LayoutInflater.from(context).inflate(R.layout.fragment_setting,null);
             container.addView(view);
             return view;
 //            return gridViews[position];

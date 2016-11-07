@@ -7,11 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.MotionEvent;
 
-import com.flyco.tablayout.CommonTabLayout;
-import com.flyco.tablayout.listener.CustomTabEntity;
-import com.flyco.tablayout.listener.OnTabSelectListener;
-import com.younchen.chat.entity.TabEntity;
-import com.younchen.chat.model.MusicMonitor;
+import com.ashokvarma.bottomnavigation.BottomNavigationBar;
+import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.younchen.chat.ui.BaseActivity;
 import com.younchen.chat.ui.fragments.BaseFragment;
 import com.younchen.chat.ui.fragments.ChatListFragment;
@@ -25,20 +22,11 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
-    private CommonTabLayout mTabLayout;
     private ViewPager viewPager;
     private ArrayList<BaseFragment> fragments;
-    private String[] titles;
-    private MusicMonitor musicMonitor;
-    //tab 实体
-    private ArrayList<CustomTabEntity> mTabEntities;
+    private BottomNavigationBar bottomBar;
 
-    private int[] mIconUnselectIds = {
-            R.mipmap.tab_home_unselect, R.mipmap.tab_speech_unselect,
-            R.mipmap.tab_contact_unselect, R.mipmap.tab_more_unselect};
-    private int[] mIconSelectIds = {
-            R.mipmap.tab_home_select, R.mipmap.tab_speech_select,
-            R.mipmap.tab_contact_select, R.mipmap.tab_more_select};
+    private MyViewPagerAdapter myViewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,27 +41,39 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initView() {
         getRootView();
-        mTabLayout = findView(R.id.tabLayout);
-        viewPager = findView(R.id.viewPager);
-        for (int i = 0; i < titles.length; i++) {
-            CustomTabEntity entity = new TabEntity(titles[i], mIconSelectIds[i], mIconUnselectIds[i]);
-            mTabEntities.add(entity);
-        }
+        bottomBar = (BottomNavigationBar) findViewById(R.id.bottom_bar);
+        bottomBar.addItem(new BottomNavigationItem(R.mipmap.tab_home_unselect, "Home"))
+                .addItem(new BottomNavigationItem(R.mipmap.tab_speech_unselect, "Books"))
+                .addItem(new BottomNavigationItem(R.mipmap.tab_contact_unselect, "Music"))
+                .addItem(new BottomNavigationItem(R.mipmap.tab_more_unselect, "Movies & TV"))
+                .initialise();
 
+
+        bottomBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(int position) {
+
+            }
+
+            @Override
+            public void onTabUnselected(int position) {
+
+            }
+
+            @Override
+            public void onTabReselected(int position) {
+
+            }
+        });
+
+        viewPager = findView(R.id.viewPager);
         fragments.add(new ChatListFragment());
         fragments.add(new FriendsCircleFragment());
         fragments.add(new UserListFragment());
         fragments.add(new SettingFragment());
 
-        MyViewPagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager(), fragments);
-        viewPager.setAdapter(adapter);
-        mTabLayout.setTabData(mTabEntities);
-
-
-        //显示小红点
-        mTabLayout.showMsg(1, 100);
-        mTabLayout.setMsgMargin(1, -5, 5);
-        mTabLayout.showMsg(0, 55);
+        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), fragments);
+        viewPager.setAdapter(myViewPagerAdapter);
     }
 
     @Override
@@ -88,17 +88,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initEvent() {
-        mTabLayout.setOnTabSelectListener(new OnTabSelectListener() {
-            @Override
-            public void onTabSelect(int position) {
-                viewPager.setCurrentItem(position);
-            }
-
-            @Override
-            public void onTabReselect(int position) {
-
-            }
-        });
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -108,7 +97,7 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onPageSelected(int position) {
-                mTabLayout.setCurrentTab(position);
+
             }
 
             @Override
@@ -117,24 +106,16 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        musicMonitor=new MusicMonitor(this);
     }
 
     @Override
     protected void onDestroy() {
-        if(musicMonitor!=null){
-            musicMonitor.onDestory();
-        }
         super.onDestroy();
     }
 
     @Override
     public void initData() {
-        MusicCollecter musicCollecter=new MusicCollecter();
-        titles = new String[]{"聊天", "资料", "联系人", "鸡蛋"};
-        mTabEntities = new ArrayList<>();
         fragments = new ArrayList<>();
-
     }
 
     class MyViewPagerAdapter extends FragmentPagerAdapter {
