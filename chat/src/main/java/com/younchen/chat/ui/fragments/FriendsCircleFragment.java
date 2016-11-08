@@ -11,8 +11,7 @@ import android.view.ViewGroup;
 
 import com.younchen.chat.R;
 import com.younchen.chat.entity.FriendArticle;
-import com.younchen.chat.ui.adapter.FriendCircleAdapter;
-import com.younchen.chat.ui.adapter.listener.ItemClickListener;
+import com.younchen.chat.community.adapter.FriendCircleAdapter;
 import com.younchen.chat.ui.components.MyRecyclerView;
 
 /**

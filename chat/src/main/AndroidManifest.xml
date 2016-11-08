@@ -124,12 +124,12 @@
             android:name=".ui.AnimationActivity"
             android:label="@string/title_activity_animation" />
         <activity
-            android:name=".ui.CommentsDetailActivity"
+            android:name=".community.ui.CommentsDetailActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_comments_detail"
             android:theme="@style/AppThemeNoTitle" />
         <activity
-            android:name=".ui.PostArticleActivity"
+            android:name=".community.ui.PostArticleActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_post_article"
             android:theme="@style/AppThemeNoTitle" />

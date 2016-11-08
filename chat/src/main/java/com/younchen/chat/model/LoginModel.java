@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.younchen.chat.BuildConfig;
 import com.younchen.chat.MainActivity;
 import com.younchen.chat.client.ClientApi;
 import com.younchen.chat.entity.result.LoginResult;
@@ -28,7 +29,7 @@ public class LoginModel {
 
     public void requestLogin(String phone, String password) {
 
-        if(DebugUtil.getInstance().isDebug()){
+        if(BuildConfig.DEBUG){
             activity.goToActivity(MainActivity.class);
             activity.finish();
         }else{

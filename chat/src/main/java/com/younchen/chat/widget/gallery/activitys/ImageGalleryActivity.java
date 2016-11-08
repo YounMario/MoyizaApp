@@ -17,8 +17,7 @@ import android.widget.Button;
 
 import com.younchen.chat.R;
 import com.younchen.chat.model.NotificationModel;
-import com.younchen.chat.ui.PostArticleActivity;
-import com.younchen.chat.utils.YounLog;
+import com.younchen.chat.community.ui.PostArticleActivity;
 import com.younchen.chat.widget.gallery.adapter.ImageGalleryAdapter;
 import com.younchen.chat.widget.gallery.enums.PaletteColorType;
 import com.younchen.chat.widget.gallery.items.ImageItem;

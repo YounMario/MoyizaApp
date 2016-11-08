@@ -1,4 +1,4 @@
-package com.younchen.chat.ui.adapter;
+package com.younchen.chat.community.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

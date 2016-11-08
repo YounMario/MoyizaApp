@@ -1,14 +1,12 @@
 package com.younchen.chat.ui.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.View;
 
 import com.younchen.chat.R;
 import com.younchen.chat.entity.LocationItem;
 import com.younchen.chat.model.NotificationModel;
-import com.younchen.chat.ui.LocationActivity;
-import com.younchen.chat.ui.PostArticleActivity;
+import com.younchen.chat.community.ui.PostArticleActivity;
 import com.younchen.chat.ui.adapter.base.BaseAdapter;
 import com.younchen.chat.ui.adapter.base.ViewHolder;
 import com.younchen.chat.utils.IconUtils;

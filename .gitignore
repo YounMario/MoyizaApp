@@ -5,7 +5,9 @@
 .DS_Store
 /build
 /*.iml
-
+chat/*.iml
+emoji/*.iml
+chat/.idea
 
 .idea/vcs.xml
 .svn/

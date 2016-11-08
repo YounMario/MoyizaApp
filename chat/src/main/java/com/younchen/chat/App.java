@@ -6,6 +6,7 @@ import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.support.multidex.MultiDexApplication;
 import android.widget.ImageView;
 
 import com.android.volley.toolbox.HttpManager;
@@ -29,7 +30,7 @@ import io.rong.imlib.RongIMClient;
  * @date 2014年11月21日
  * @description
  */
-public class App extends Application {
+public class App extends MultiDexApplication {
     private static Context context;
     private static String token;
 
@@ -121,18 +122,6 @@ public class App extends Application {
      */
     public static void initImageLoader(Context context) {
 
-//        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-//                context).threadPriority(Thread.NORM_PRIORITY - 2)
-//                .denyCacheImageMultipleSizesInMemory()
-//                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
-//                .diskCacheSize(100 * 1024 * 1024)
-//                        // 100 Mb
-//                .tasksProcessingOrder(QueueProcessingType.LIFO)
-//                .writeDebugLogs() // Remove
-//                        // for
-//                        // release
-//                        // app
-//                .build();
 
         /**
          * 设置缓存路径。 discCache(new UnlimitedDiscCache(file, new

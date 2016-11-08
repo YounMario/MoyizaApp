@@ -48,7 +48,7 @@ public class ImageArea {
         parentW = parent.getMeasuredWidth();
         view = new ImageView(parent.getContext());
         view.setBackgroundColor(Color.GRAY);
-        view.setScaleType(ImageView.ScaleType.FIT_XY);
+        view.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageAreaHeight = DimenUtils.dp2px(200);
         list = new ArrayList<>();
         if (imageCount == 1) {
@@ -65,12 +65,11 @@ public class ImageArea {
 
     private void initOneImageView() {
         ImageView imageView = new ImageView(parent.getContext());
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT);//与父容器的左侧对齐
         imageView.setLayoutParams(lp);
         list.add(imageView);
         container.addView(imageView);
@@ -85,7 +84,7 @@ public class ImageArea {
         container.addView(linearLayout);
         for (int i = 0; i < 2; i++) {
             ImageView imageView = new ImageView(parent.getContext());
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT);
             layoutParams.weight = 1;
             layoutParams.height = twoImageHeight;
@@ -105,7 +104,7 @@ public class ImageArea {
         container.addView(linearLayout);
         for (int i = 0; i < 3; i++) {
             ImageView imageView = new ImageView(parent.getContext());
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT);
             layoutParams.weight = 1;
             layoutParams.height = threeImageHeight;
@@ -125,7 +124,7 @@ public class ImageArea {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         layoutParams.height = twoImageHeight;
         layoutParams.bottomMargin = imageMargin;
-        big.setScaleType(ImageView.ScaleType.FIT_XY);
+        big.setScaleType(ImageView.ScaleType.CENTER_CROP);
         big.setLayoutParams(layoutParams);
         list.add(big);
         linearLayout.addView(big);
@@ -135,7 +134,7 @@ public class ImageArea {
         subLinearLayout.setWeightSum(3);
         for (int i = 0; i < 3; i++) {
             ImageView imageView = new ImageView(parent.getContext());
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             LinearLayout.LayoutParams mlayoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT);
             mlayoutParams.weight = 1;
             mlayoutParams.height = threeImageHeight;
@@ -152,6 +151,7 @@ public class ImageArea {
     public void setImage(String... url) {
         for (int i = 0; i < list.size(); i++) {
             final ImageView view = list.get(i);
+
             HttpManager.getInstance().getImageLoader().get(url[i], new ImageLoader.ImageListener() {
                 @Override
                 public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
