@@ -1,4 +1,4 @@
-package com.younchen.chat.ui;
+package com.younchen.chat.community.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,9 @@ import com.younchen.chat.R;
 import com.younchen.chat.entity.LocationItem;
 import com.younchen.chat.model.NotificationCenterDelegate;
 import com.younchen.chat.model.NotificationModel;
-import com.younchen.chat.ui.adapter.PickedImageAdapter;
-import com.younchen.chat.ui.adapter.listener.ItemClickListener;
+import com.younchen.chat.community.adapter.PickedImageAdapter;
+import com.younchen.chat.ui.BaseActivity;
+import com.younchen.chat.ui.LocationActivity;
 import com.younchen.chat.ui.components.MyRecyclerView;
 import com.younchen.chat.ui.view.IconTextView;
 import com.younchen.chat.ui.view.MediumTextView;
